@@ -1,11 +1,10 @@
 {
   "name": "simple-flux",
   "version": "1.0.0",
-  "description": "Dead simple flux implementation",
-  "main": "lib/index.js",
+  "description": "Simple flux implementation",
   "scripts": {
     "build": "babel -d lib/ src/",
-    "test": "echo \"No tests\""
+    "test": "babel-node spec/run.js"
   },
   "author": "Jordan Schalm <jordan.schalm@gmail.com>",
   "license": "ISC",

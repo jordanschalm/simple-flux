@@ -22,6 +22,13 @@ class Dispatcher {
 	}
 
 	/**
+		@method clear - Resets the contents of the store.
+	**/
+	clear () {
+		this.subscribers = new Map();
+	}
+
+	/**
 		@method register - Registers a callback to a particular action. When the
 		action is dispatched, the callback will be called with the action payload.
 		@param action {String} - The name of the action to subscribe to.

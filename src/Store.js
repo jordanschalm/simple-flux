@@ -5,8 +5,21 @@ import Dispatcher from './Dispatcher';
 	hooks for subscribing callbacks to changes in the store's state.
 **/
 export default class Store {
-	constructor () {
+	constructor (...handlers) {
 		this.subscribers = new Map();
+		this.register(...handlers);
+	}
+
+	/**
+		@method register - Registers a set of handler functions for different actions
+		with the global dispatcher.
+		@param handlers {Array<Array[String, Function]>} - An array of tuples containing
+		the action name and the handler.
+	**/
+	register (...handlers) {
+		(handlers || []).forEach(handler => {
+			Dispatcher.register(...handler);
+		});
 	}
 
 	/**
@@ -28,18 +41,6 @@ export default class Store {
 	**/
 	unsubscribe (callback) {
 		this.subscribers.delete(callback);
-	}
-
-	/**
-		@method register - Registers a set of handler functions for different actions
-		with the global dispatcher.
-		@param handlers {Array<Array[String, Function]>} - An array of tuples containing
-		the action name and the handler.
-	**/
-	register (handlers) {
-		(handlers || []).forEach(handler => {
-			Dispatcher.register(...handler);
-		});
 	}
 
 	/**
