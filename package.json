@@ -4,6 +4,7 @@
   "description": "Simple flux implementation",
   "scripts": {
     "build": "babel -d lib/ src/",
+    "postinstall": "npm run build",
     "test": "babel-node spec/run.js"
   },
   "author": "Jordan Schalm <jordan.schalm@gmail.com>",
