@@ -1,5 +1,4 @@
 # Simple Flux
-An aptly named flux implementation.
 
 ## Dispatcher
 The Dispatcher receives actions from action creators and handles passing payloads on to subscribed stores.
