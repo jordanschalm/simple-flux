@@ -1,5 +1,7 @@
 # Simple Flux
 
+![Build Status](https://api.travis-ci.org/jordanschalm/simple-flux.svg "Build Status")
+
 ## Dispatcher
 The Dispatcher receives actions from action creators and handles passing payloads on to subscribed stores.
 
