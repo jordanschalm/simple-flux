@@ -25,7 +25,7 @@ describe('Dispatcher', () => {
 		expect(f).toThrow();
 	});
 
-	it('should call a registered callback when the action is dispatched', (done) => {
+	it('should call a registered callback when the action is dispatched', done => {
 		const f = () => done();
 		testDispatcher.register('A', f);
 		testDispatcher.dispatch('A');

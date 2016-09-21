@@ -1,7 +1,6 @@
-var Dispatcher = require('./lib/Dispatcher');
-var Store = require('./lib/Store');
-
+/* eslint-disable */
 exports = module.exports = {
-	Dispatcher: Dispatcher,
-	Store: Store
+	Dispatcher: require('./lib/Dispatcher'),
+	Store: require('./lib/Store')
 };
+/* eslint-enable */

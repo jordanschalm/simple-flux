@@ -20,7 +20,7 @@ describe('Store', () => {
 		expect(g).toThrow();
 	});
 
-	it('should call a subscribed callback when emitChange is called', (done) => {
+	it('should call a subscribed callback when emitChange is called', done => {
 		const f = () => done();
 		testStore.subscribe(f);
 		testStore.emitChange();
